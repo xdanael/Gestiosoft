@@ -8,8 +8,11 @@ npm install -g @angular/cli
 npm install
 
 #Git account settings
-git config --get user.name
-git config --get user.email
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
+#Checking Your Settings
+git config --list
 
 
 ## Development server
