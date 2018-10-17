@@ -1,4 +1,4 @@
-# Gestiosoft Redme v1
+# Gestiosoft Readme v1
 
 #install
 npm install -g @angular/cli
