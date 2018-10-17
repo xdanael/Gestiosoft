@@ -1,0 +1,15 @@
+$scroll-background-firstcolor: #FFFFFF;
+$scroll-background-secondColor: #FFFFFF;
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: -webkit-linear-gradient(left, $scroll-background-firstcolor, $scroll-background-secondColor);
+    border: 1px solid #333;
+    box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0);
+}

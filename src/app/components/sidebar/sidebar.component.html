@@ -1,0 +1,132 @@
+    <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}" *ngIf="isUserLOggedIn">
+        <div class="list-group">
+
+            <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                <i class="fa fa-fw fa-dashboard"></i>&nbsp;
+                <span> Dashboard </span>
+            </a>
+
+
+            <!-- Gestione Risorse Umane e Formazione -->
+            <div class="nested-menu">
+                <a class="list-group-item" (click)="addExpandClass('humanresources')">
+                    <i class="fa fa-user"></i>&nbsp;
+                    <span> Risorse Umane e Formazione</span>
+                </a>
+                <li class="nested" [class.expand]="showMenu === 'humanresources'">
+                    <ul class="submenu">
+                        <li>
+                            <a routerLink="/cerca-risorsa" [routerLinkActive]="['router-link-active']" class="list-group-item"
+                               data-toggle="tooltip" data-placement="right" title="Risorse">
+                                <i class="fa fa-eye"></i>&nbsp;
+                                <span> Risorse </span>
+                            </a>
+                            <a routerLink="/cerca-ente" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-building-o"></i>&nbsp;
+                                <span> Enti </span>
+                            </a>
+                            <a routerLink="/cerca-piano-formativo" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-line-chart"></i>&nbsp;
+                                <span> Piano formativo </span>
+                            </a>
+                            <a routerLink="/formazione-sicurezza" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-graduation-cap"></i>&nbsp;
+                                <span> Formazione sicurezza </span>
+                            </a>
+                            <a routerLink="/documenti" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-file"></i>&nbsp;
+                                <span> Documenti </span>
+                            </a>
+                            <a routerLink="/report" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;
+                                <span> Report </span>
+                            </a>
+                        </li>
+
+
+                     <!--   <li>
+                            <a routerLink="/cerca-risorsa" [routerLinkActive]="['router-link-active']" class="list-group-item"
+                                        data-toggle="tooltip" data-placement="right" title="Cerca risorsa">
+                                <i class="fa fa-search"></i>&nbsp;
+                                <span> Cerca risorsa </span>
+                            </a>
+                            <a routerLink="/inserisci-risorsa" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-plus"></i>&nbsp;
+                                <span> Inserisci risorsa </span>
+                            </a>
+                            <a routerLink="/cerca-ente" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-search"></i>&nbsp;
+                                <span> Cerca ente </span>
+                            </a>
+                            <a routerLink="/inserisci-ente" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-plus"></i>&nbsp;
+                                <span> Inserisci ente </span>
+                            </a>
+                            <a routerLink="/cerca-piano-formativo" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-search"></i>&nbsp;
+                                <span> Cerca piano formativo </span>
+                            </a>
+                            <a routerLink="/inserisci-piano-formativo" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-plus"></i>&nbsp;
+                                <span> Inserisci piano formativo </span>
+                            </a>
+                            <a routerLink="/formazione-sicurezza" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-id-card-o"></i>&nbsp;
+                                <span> Formazione sicurezza </span>
+                            </a>
+                            <a routerLink="/documenti" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-file"></i>&nbsp;
+                                <span> Documenti </span>
+                            </a>
+                            <a routerLink="/report" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;
+                                <span> Report </span>
+                            </a>
+                        </li>  -->
+
+
+                    </ul>
+                </li>
+            </div>
+
+            <!-- Gestione Risorse Umane e Formazione -->
+
+
+
+            <!-- NESTED -->
+            <div class="nested-menu">
+                <a class="list-group-item" (click)="addExpandClass('pages')">
+                    <i class="fa fa-plus"></i>&nbsp;
+                    <span>Sviluppo</span>
+                </a>
+                <li class="nested" [class.expand]="showMenu === 'pages'">
+                    <ul class="submenu">
+                        <li>
+                            <a routerLink="/form" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-fw fa-edit"></i>&nbsp;
+                                <span> Form </span>
+                            </a>
+                            <a routerLink="/tables" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-fw fa-table"></i>&nbsp;
+                                <span>Tables</span>
+                            </a>
+                            <a routerLink="/charts" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;
+                                <span>Charts</span>
+                            </a>
+                            <a routerLink="/test-form" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <i class="fa fa-fw fa-desktop"></i>&nbsp;
+                                <span>Test-Form</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+            <!-- NESTED -->
+        </div>
+
+
+        <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
+            <i class="fa fa-exchange"></i>
+        </div>
+    </nav>

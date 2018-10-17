@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-xl-12">
+   <h2 class="page-header">{{heading}}</h2>
+    <ol class="breadcrumb">
+        <!--
+      <li class="breadcrumb-item">
+           <i class="fa fa-dashboard"></i> <a href="Javascript:void(0)" [routerLink]="['/dashboard']">&nbsp;Dashboard</a>
+      </li> -->
+      <li *ngFor="let header of pageheaders">
+           <span *ngIf="header.route=='#'" class="highlighted">
+                &nbsp;<i class="fa {{header.icon}}"></i>&nbsp;<a href="Javascript:void(0)" routerLink="{{header.route}}">{{header.path}}&nbsp;</a>
+           </span>
+           <span *ngIf="header.route!='#'">
+               &nbsp; <i class="fa {{header.icon}}"></i>&nbsp;<a href="Javascript:void(0)" [routerLink]="header.route">{{header.path}}&nbsp;</a>
+           </span>
+      </li>
+    </ol>
+  </div>
+</div>
