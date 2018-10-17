@@ -1,4 +1,4 @@
-#Gestiosoft Readme
+#Gestiosoft Readme TestCommitwith gitKraken
 
 #install cli
 npm install -g @angular/cli
