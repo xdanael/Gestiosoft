@@ -1,6 +1,6 @@
-# Gestiosoft Readme v1
+#Gestiosoft Readme
 
-#install
+#install cli
 npm install -g @angular/cli
 
 
@@ -10,7 +10,6 @@ npm install
 #Git account settings
 git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
-
 #Checking Your Settings
 git config --list
 
