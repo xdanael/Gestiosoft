@@ -4,6 +4,9 @@
 npm install -g @angular/cli
 
 
+#install dependecies project
+npm install
+
 #Git account settings
 git config --get user.name
 git config --get user.email
